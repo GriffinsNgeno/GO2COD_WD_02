@@ -148,4 +148,27 @@ function selectAnswer(e){
     })
     nextButton.style.display = 'block'
 }
-startQuiz()
+
+function handleNextButton(){
+    const selectedBtn = document.querySelector('.btn.correct')
+    if(selectedBtn){
+        score++
+    }
+    currentQuestionIndex++
+    if(currentQuestionIndex < questions.length){
+        showQuestion()
+    } else{
+        nextButton.innerHTML = 'Restart'
+        questionElement.innerHTML = 'Your final score is'+ score + '/' + questions.length
+    }
+    resetState()
+ 
+}
+
+nextButton.addEventListener('click'), ()=>{
+    if(currentQuestionIndex < questions.length){
+        handleNextButton()
+    }else{
+        startQuiz()
+    }
+}

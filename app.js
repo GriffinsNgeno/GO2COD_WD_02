@@ -140,5 +140,12 @@ function selectAnswer(e){
     }else{
         selectedBtn.classList.add('incorrect')
     }
+    Array.from(answerButton.children).forEach(button => {
+        if(button.dataset.correct === 'true'){
+            button.classList.add('correct')
+        }
+        button.disabled = true
+    })
+    nextButton.style.display = 'block'
 }
 startQuiz()

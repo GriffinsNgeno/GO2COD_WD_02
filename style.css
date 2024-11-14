@@ -6,7 +6,7 @@
 }
 
 body{
-    background: #001e4d;
+    background: linear-gradient(135deg, #153677, #4e085f);
 }
 
 .app{
@@ -21,7 +21,7 @@ body{
 .app h1{
     font-weight: 25px;
     color: #001e4d;
-    /* font-weight: 600; */
+    font-weight: 600;
     text-align: center;
     border-bottom: 1px solid #333;
     padding-bottom: 30px;
